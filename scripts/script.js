@@ -9,7 +9,7 @@ var planeTracker = Scene.root.find('planeTracker0');
 
 
 TouchGestures.onTap().subscribe(function(gesture) {
-	Diagnostics.log(mug_ctrl.transform.scaleX);
+	//Diagnostics.log(mug_ctrl.transform.scaleX);
 	planeTracker.trackPoint(gesture.location);
 
 	var lastScaleY = mug_ctrl.transform.scaleY.lastValue;
@@ -37,5 +37,5 @@ TouchGestures.onRotate(mug_ctrl).subscribe(function(gesture) {
 });
 
 TouchGestures.onLongPress().subscribe(function(gesture) {
-	
+	planeTracker.trackPoint(gesture.location);
 });
